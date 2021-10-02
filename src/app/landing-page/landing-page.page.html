@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Home </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding" [fullscreen]="true">
+  <ion-button expand="block" shape="round" (click)="logout()"
+    >Logout</ion-button
+  >
+  <div *ngFor="let item of myArray">
+    <div *ngFor="let key of Object.keys(myArray[0])">
+      <ion-card>
+        <p>Id: {{item[key].Id}}</p>
+        <p>Name: {{item[key].Name}}</p>
+        <p>Major: {{item[key].Major}}</p>
+        <ion-button
+          shape="round"
+          (click)="cardButton($event)"
+          id="{{item[key].Id}}"
+          >Click here</ion-button
+        >
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

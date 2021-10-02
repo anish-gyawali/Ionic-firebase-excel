@@ -1,0 +1,52 @@
+<p>this is register page</p>
+<ion-content>
+  <ion-card>
+    <form>
+      <ion-list>
+        <ion-item>
+          <ion-label position="stacked">Firstname</ion-label>
+          <ion-input
+            required
+            type="text"
+            [(ngModel)]="firstname"
+            name="firstname"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Lastname</ion-label>
+          <ion-input
+            required
+            type="text"
+            [(ngModel)]="lastname"
+            name="lastname"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Email</ion-label>
+          <ion-input
+            required
+            type="email"
+            [(ngModel)]="email"
+            name="email"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Password</ion-label>
+          <ion-input
+            required
+            type="password"
+            [(ngModel)]="password"
+            name="password"
+          ></ion-input>
+        </ion-item>
+        <ion-button
+          type="submit"
+          expand="block"
+          shape="round"
+          (click)="register()"
+          >Register</ion-button
+        >
+      </ion-list>
+    </form>
+  </ion-card>
+</ion-content>
